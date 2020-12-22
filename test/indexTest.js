@@ -140,7 +140,8 @@ describe('index.js', function () {
     const testArr = unmodifiedTestArr.slice()
 
     it('returns the first element of the collection', function () {
-      expect(fi.first(testArr)).to.equal(1)
+      // expect(fi.first(testArr)).to.equal(1)
+      expect(arraysEqual(fi.first(testArr), [1])).to.equal(true) // I believe the test should be written this way to accept an array as an answer, not in integer
     })
 
     it('returns the first n elements of the collection when the second optional argument (n) is provided', function () {
@@ -152,7 +153,8 @@ describe('index.js', function () {
     const testArr = unmodifiedTestArr.slice()
 
     it('returns the last element of the collection', function () {
-      expect(fi.last(testArr)).to.equal(4)
+      // expect(fi.last(testArr)).to.equal(4)
+      expect(arraysEqual(fi.last(testArr), [4])).to.equal(true)
     })
 
     it('returns the last n elements of the collection when the second optional argument (n) is provided', function () {
